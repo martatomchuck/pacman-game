@@ -1,2 +1,2 @@
 ## Pacman
-Pacman game coded in ReactJS
+Pacman game coded with React JS
