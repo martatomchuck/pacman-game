@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import '../css/pacman.css';
 
-function App() {
+function Pacman() {
   return (
     <div>
        Pacman
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default Pacman;
