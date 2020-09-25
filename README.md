@@ -1,2 +1,2 @@
-## Packman
-Packman game coded in ReactJS
+## Pacman
+Pacman game coded in ReactJS
