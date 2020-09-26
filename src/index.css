@@ -11,9 +11,17 @@ body {
 }
 
 .header {
-    height: 100px;
+    height: 60px;
     background-color: rebeccapurple;
     color: white;
     padding: 0 10px;
     text-align: center;
+}
+
+.board {
+    position: relative;
+    background-color: #34495e;
+    border: 10px #c0392b solid;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 80px);
 }
