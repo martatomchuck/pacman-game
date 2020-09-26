@@ -9,3 +9,11 @@ body {
     padding: 0;
     background-color: antiquewhite;
 }
+
+.header {
+    height: 100px;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 0 10px;
+    text-align: center;
+}

@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import '../css/pacman.css';
+import Header from '../components/Header';
+import Board from '../components/Board';
 
 function Pacman() {
+  const [score, setScore] = useState(0);
+
   return (
     <div>
-       Pacman
+        <Header score={score}/>
+        <Board/>
     </div>
   );
 }
