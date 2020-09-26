@@ -13,10 +13,28 @@ class Pacman extends Component {
         }
     }
 
+    constructor(props) {
+        super(props);
+        this.pacmanRef = React.createRef();
+    }
+
+    componentDidMount() {
+        // current = reference to current DOM tree
+        this.pacmanRef.current.focus();
+    }
+
+    handleKeyDown = (event) => {
+        console.log(event.keyCode, event.key);
+    }
+
     render() {
         return (
             <div
+                // Asigning ref to element
+                ref={this.pacmanRef}
                 className="pacman"
+                tabIndex="0"
+                onKeyDown={this.handleKeyDown}
                 style={this.state.position}
             >
                 <PacmanSvg/>
