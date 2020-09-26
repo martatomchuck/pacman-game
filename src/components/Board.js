@@ -1,10 +1,16 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
+
+import Pacman from './Pacman';
 
 class Board extends Component {
     render() {
         return (
-            <div>Hello World!</div>
+            <div className="board">
+                <Pacman/>
+                {/* <Ghost/> */}
+                {/* <Ghost/> */}
+                {/* <Food/> */}
+            </div>
         )
     }
 }

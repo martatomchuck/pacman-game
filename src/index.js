@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import Pacman from './components/Pacman';
+import PacmanGame from './components/PacmanGame';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Pacman />
+    <PacmanGame />
   </React.StrictMode>,
   document.getElementById('root')
 );

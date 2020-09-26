@@ -25,3 +25,10 @@ body {
     height: calc(100vh - 120px);
     width: calc(100vw - 80px);
 }
+
+.pacman {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
