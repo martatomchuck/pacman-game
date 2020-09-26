@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-
-import '../css/pacman.css';
-import Header from '../components/Header';
-import Board from '../components/Board';
+import React from 'react';
 
 function Pacman() {
-  const [score, setScore] = useState(0);
+    return (
+        <div className="pacman">
 
-  return (
-    <div>
-        <Header score={score}/>
-        <Board/>
-    </div>
-  );
+        </div>
+    )
 }
+
+Pacman.defaultProps = {
+
+};
 
 export default Pacman;
