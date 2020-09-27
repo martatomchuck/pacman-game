@@ -46,6 +46,14 @@ body {
     opacity: 0.5;
 }
 
+.ghost-blue {
+    fill: #5e91aa;
+}
+
+.ghost-pink {
+    fill: #E5A3C6;
+}
+
 .pacman:focus {
     outline: none;
 }
