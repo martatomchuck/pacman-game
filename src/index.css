@@ -35,6 +35,15 @@ body {
     position: absolute;
     height: 50px;
     width: 50px;
+    padding: 2px;
+}
+
+.ghost {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 4px;
+    opacity: 0.5;
 }
 
 .pacman:focus {
@@ -42,9 +51,7 @@ body {
 }
 
 /* Turning packman in all directions */
-.pacman-right {
-
-}
+.pacman-right {}
 
 .pacman-left {
     transform: rotateY(180deg);
