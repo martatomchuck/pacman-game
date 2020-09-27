@@ -62,7 +62,7 @@ body {
     height: 50px;
     width: 50px;
     padding: 4px;
-    opacity: 0.7;
+    background-color: #fff7e0;
 }
 
 .ghost-blue {
@@ -82,7 +82,7 @@ body {
 .food-dot {
     width: 10px;
     height: 10px;
-    background-color: orangered;
+    background-color: orange;
     margin: 20px;
     border-radius: 50%;
 }

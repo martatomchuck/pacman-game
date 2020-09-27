@@ -7,8 +7,8 @@ class Ghost extends Component {
     state = {
         direction: 'left',
         position: {
-            top: 50 * 3,
-            left: 50 * 3
+            top: 50 * 7,
+            left: 50 * 10
         }
     }
 
