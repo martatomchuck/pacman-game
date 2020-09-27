@@ -6,7 +6,7 @@ import { ReactComponent as PacmanSvg } from '../assets/pacman.svg';
 class Pacman extends Component {
     
     state = {
-        direction: 'right',
+        direction: '',
         position: {
             top: 0,
             left: 0
@@ -24,10 +24,11 @@ class Pacman extends Component {
     }
 
     handleKeyDown = (event) => {
-        console.log(event.keyCode, event.key);
+        // console.log(event.keyCode, event.key);
 
         const currentTop = this.state.position.top;
         const currentLeft = this.state.position.left;
+        const { step } = this.props;
 
         // 37 ArrowLeft
         // 38 ArrowUp
@@ -37,25 +38,44 @@ class Pacman extends Component {
         switch (event.keyCode) {
             case 37:
                 this.setState({
+                    position: {
+                        top: currentTop,
+                        left: currentLeft - step
+                    },
                     direction: 'left'
                 })
                 break;
             case 38:
                 this.setState({
+                    position: {
+                        top: currentTop - step,
+                        left: currentLeft
+                    },
                     direction: 'up'
                 })
                 break;
             case 39:
                 this.setState({
+                    position: {
+                        top: currentTop,
+                        left: currentLeft + step
+                    },
                     direction: 'right'
                 })
                 break;
             case 40:
                 this.setState({
+                    position: {
+                        top: currentTop + step,
+                        left: currentLeft
+                    },
                     direction: 'down'
                 })
                 break;
             default:
+                this.setState({
+                    direction: 'right'
+                })
         }
     }
 

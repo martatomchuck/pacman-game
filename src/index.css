@@ -7,8 +7,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #edc988;
-    background-color: #821752;
     background-color: #132743;
 }
 
@@ -16,7 +14,6 @@ body {
     height: 60px;
     line-height: 60px;
     background-color: f0a500;
-    color: #821752;
     color: #edc988;
     padding: 0 10px;
     text-align: center;
