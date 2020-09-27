@@ -38,22 +38,6 @@ body {
     padding: 2px;
 }
 
-.ghost {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    padding: 4px;
-    opacity: 0.7;
-}
-
-.ghost-blue {
-    fill: #5e91aa;
-}
-
-.ghost-pink {
-    fill: #E5A3C6;
-}
-
 .pacman:focus {
     outline: none;
 }
@@ -71,4 +55,38 @@ body {
 
 .pacman-down {
     transform: rotate(90deg);
+}
+
+.ghost {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 4px;
+    opacity: 0.7;
+}
+
+.ghost-blue {
+    fill: #5e91aa;
+}
+
+.ghost-pink {
+    fill: #E5A3C6;
+}
+
+.food {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.food-dot {
+    width: 10px;
+    height: 10px;
+    background-color: orangered;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.hidden {
+    display: none;
 }
