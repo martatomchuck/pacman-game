@@ -28,7 +28,7 @@ class Pacman extends Component {
 
         const currentTop = this.state.position.top;
         const currentLeft = this.state.position.left;
-        const { step } = this.props;
+        const { step, border, size, topScoreHeight } = this.props;
 
         // 37 ArrowLeft
         // 38 ArrowUp
@@ -40,7 +40,8 @@ class Pacman extends Component {
                 this.setState({
                     position: {
                         top: currentTop,
-                        left: currentLeft - step
+                        // if the value of left is less than 0, take 0
+                        left: Math.max(currentLeft - step, 0)
                     },
                     direction: 'left'
                 })
@@ -48,7 +49,8 @@ class Pacman extends Component {
             case 38:
                 this.setState({
                     position: {
-                        top: currentTop - step,
+                        // if the value of top is less than 0, take 0
+                        top: Math.max(currentTop - step, 0),
                         left: currentLeft
                     },
                     direction: 'up'
@@ -58,7 +60,8 @@ class Pacman extends Component {
                 this.setState({
                     position: {
                         top: currentTop,
-                        left: currentLeft + step
+                        // minimal value of: right step or window width minus border and pacman size)
+                        left: Math.min(currentLeft + step, window.innerWidth - border/2 - size)
                     },
                     direction: 'right'
                 })
@@ -66,7 +69,7 @@ class Pacman extends Component {
             case 40:
                 this.setState({
                     position: {
-                        top: currentTop + step,
+                        top: Math.min(currentTop + step, window.innerHeight - border - size - topScoreHeight),
                         left: currentLeft
                     },
                     direction: 'down'
