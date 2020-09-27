@@ -61,7 +61,7 @@ class Pacman extends Component {
                     position: {
                         top: currentTop,
                         // minimal value of: right step or window width minus border and pacman size)
-                        left: Math.min(currentLeft + step, window.innerWidth - border/2 - size)
+                        left: Math.min(currentLeft + step, window.innerWidth - border - size - 80)
                     },
                     direction: 'right'
                 })
@@ -69,7 +69,7 @@ class Pacman extends Component {
             case 40:
                 this.setState({
                     position: {
-                        top: Math.min(currentTop + step, window.innerHeight - border - size - topScoreHeight),
+                        top: Math.min(currentTop + step, window.innerHeight - border - size - topScoreHeight - 60),
                         left: currentLeft
                     },
                     direction: 'down'
@@ -102,7 +102,7 @@ class Pacman extends Component {
 }
 
 Pacman.defaultProps = {
-    step: 50, // pacman steps: 50px
+    step: 50, // pacman single step: 50px
     size: 50, // pacman size: 50x50
     // TO DO: move to config
     border: 10 * 2,
