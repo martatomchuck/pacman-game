@@ -61,7 +61,7 @@ class Pacman extends Component {
                     position: {
                         top: currentTop,
                         // minimal value of: right step or window width minus border and pacman size)
-                        left: Math.min(currentLeft + step, window.innerWidth - border - size - 80)
+                        left: Math.min(currentLeft + step, window.innerWidth - border - size - 100)
                     },
                     direction: 'right'
                 })

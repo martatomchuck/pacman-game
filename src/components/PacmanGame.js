@@ -9,7 +9,7 @@ function PacmanGame() {
   return (
     <>
         <Header score={score}/>
-        <Board/>
+        <Board setScore={setScore}/>
     </>
   );
 }

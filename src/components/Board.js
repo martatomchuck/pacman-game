@@ -26,9 +26,45 @@ class Board extends Component {
         }
     }
 
+    // checking for pacman position
+    componentDidMount() {
+        this.intervalFood = setInterval(this.lookForFood, 100);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalFood);
+    }
+
     // changing food display to hidden
     lookForFood = () => {
+        const pacmanX = this.pacmanRef.current.state.position.left;
+        const pacmanY = this.pacmanRef.current.state.position.top;
+        const pacmanSize = this.pacmanRef.current.props.size;
 
+        const pacmanLastX = pacmanX + pacmanSize / 2;
+        const pacmanLastY = pacmanY + pacmanSize / 2;
+
+        for (let i = 0; i <= this.amountOfFood; i++) {
+            const currentFood = this['food' + i].current;
+            if (currentFood) {
+                const currentFoodX = currentFood.state.position.left;
+                const currentFoodY = currentFood.state.position.top;
+                const currentFoodSize = currentFood.props.foodSize;
+                const currentFoodLastX = currentFoodX + currentFoodSize / 2;
+                const currentFoodLastY = currentFoodY + currentFoodSize / 2;
+
+                if ( 
+                    (pacmanX >= currentFoodX && pacmanX <= currentFoodLastX)
+                    || (pacmanLastX >= currentFoodX && pacmanLastX <= currentFoodLastX) ) {
+                    if ( (pacmanY >= currentFoodY && pacmanY <= currentFoodLastY) || (pacmanLastY >= currentFoodY && pacmanLastY <= currentFoodLastY) ) {
+                        if (!currentFood.state.hidden) {
+                            currentFood.ate() // !hidden
+                            this.props.setScore((value) => value + 1);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     render() {
