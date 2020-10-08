@@ -83,7 +83,7 @@ class Board extends Component {
                 currentLeft = 0;
             }
 
-            if (currentTop + foodSize >= (window.innerHeight - border - topScoreHeight - 60)) {
+            if (currentTop + foodSize >= (window.innerHeight - border - topScoreHeight - 30)) {
                 break;
             }
 
@@ -106,6 +106,7 @@ class Board extends Component {
                 <Pacman ref={this.pacmanRef}/>
                 <Ghost color="blue"/>
                 <Ghost color="pink"/>
+                <Ghost color="purple"/>
             </div>
         )
     }

@@ -26,8 +26,8 @@ body {
     position: relative;
     background-color: #fff7e0;
     border: 10px #407088 solid;
-    height: calc(100vh - 120px);
     width: calc(100vw - 100px);
+    height: calc(100vh - 120px);
     margin: 0 auto;
 }
 
@@ -71,6 +71,10 @@ body {
 
 .ghost-pink {
     fill: #E5A3C6;
+}
+
+.ghost-purple {
+    fill: rebeccapurple;
 }
 
 .food {
